@@ -1,5 +1,5 @@
 # Etapa de construcción
-FROM maven:3.8.6-eclipse-temurin-21 AS build
+FROM eclipse-temurin:21.0.5_11-jdk AS build
 
 # Copia el código fuente y el archivo de configuración de Maven
 WORKDIR /build
