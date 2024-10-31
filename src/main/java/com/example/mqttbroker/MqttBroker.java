@@ -14,7 +14,7 @@ public class MqttBroker {
     public static void main(String[] args) {
         Server mqttBroker = new Server();
         Properties configProps = new Properties();
-        configProps.setProperty("port", "1883");
+        configProps.setProperty("port", "80");
         configProps.setProperty("host", "0.0.0.0"); // Escucha en todas las interfaces
 
         try {
