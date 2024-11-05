@@ -1,16 +1,16 @@
 {
     "services": [
       {
-        "name": "tomi-mqtt-broker",
-        "image": "eclipse-temurin:21-jre",
-        "build": {
-          "dockerfile": "Dockerfile"
-        },
+        "name": "mqtt-broker",
+        "image": "emqx/emqx:latest",
         "env": {
-          "JAVA_OPTS": "-Xms512m -Xmx1024m"
+          "EMQX_NAME": "mqtt-broker"
         },
         "ports": {
           "1883": {
+            "protocol": "tcp"
+          },
+          "8081": {
             "protocol": "tcp"
           }
         }
