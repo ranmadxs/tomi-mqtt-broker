@@ -19,7 +19,7 @@ WORKDIR /app
 COPY --from=build /build/target/tomi-mqtt-broker-1.0-SNAPSHOT.jar /app/app.jar
 
 # Expone el puerto 80 para MQTT
-EXPOSE 80
+EXPOSE 1883
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
